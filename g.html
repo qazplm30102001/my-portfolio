@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل دخول المستشفى</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://example.com/hospital-background.jpg'); /* استبدل بالرابط الصحيح */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            z-index: 2;
+        }
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .doctor-image {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: float 3s ease-in-out infinite;
+            z-index: 3;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(-5px);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <h2>تسجيل دخول</h2>
+        <input type="text" placeholder="اسم المستخدم" required>
+        <input type="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل دخول</button>
+    </div>
+    <img src="https://example.com/doctor.png" alt="دكتور" class="doctor-image"> <!-- استبدل بالرابط الصحيح -->
+</body>
+</html>
